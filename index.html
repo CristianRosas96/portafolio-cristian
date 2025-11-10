@@ -1,69 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio – Cristian Rosas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cristian Rosas | Portfolio</title>
+
+    <style>
+        /* ======== Estilos generales ======== */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Fondo con grilla */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(transparent 95%, rgba(255,255,255,0.05) 100%),
+                linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.05) 100%);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid #22ff88;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        /* Encabezado */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #22ff88;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 { margin: 0; }
+
+        h2 {
+            color: #22ff88;
+            margin-top: 0;
+        }
+
+        /* Chips / skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            border: 1px solid #22ff88;
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 15px;
+        }
+
+        /* Botones */
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            border: 1px solid #22ff88;
+            padding: 10px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #22ff88;
+            color: black;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="container">
 
-    <h1>Portafolio de Programación – Cristian Rosas</h1>
+        <!-- Header -->
+        <div class="card">
+            <div class="header">
+                <div class="avatar">CR</div>
+                <div>
+                    <h1>Cristian Rosas</h1>
+                    <p>Desarrollador en formación | Estudiante de Programación</p>
+                    <p>Ubicación: Argentina</p>
+                </div>
+            </div>
+        </div>
 
-    <h2>Sobre mí</h2>
-    <p>
-        Soy Cristian Rosas, estudiante de programación en mi primer año. 
-        Me interesa el desarrollo en Java, la lógica de programación y crear aplicaciones que 
-        resuelvan problemas reales. Busco seguir aprendiendo y creciendo como desarrollador.
-    </p>
+        <!-- Educación -->
+        <div class="card">
+            <h2>📚 Educación y Estudios</h2>
 
-    <h2>Habilidades Técnicas</h2>
-    <ul>
-        <li>Java</li>
-        <li>Programación Orientada a Objetos (POO)</li>
-        <li>Git y GitHub</li>
-        <li>HTML y CSS (básico)</li>
-        <li>SQL básico</li>
-        <li>Lógica de programación</li>
-        <li>Uso de IntelliJ, VS Code y Eclipse</li>
-    </ul>
+            <h3>Tecnicatura en Programación</h3>
+            <p>UTN – En curso</p>
 
-    <h2>Proyectos Personales</h2>
+            <h3>Estudios adicionales</h3>
+            <p>Cursos, talleres y práctica autodidacta relacionados a desarrollo web y software.</p>
+        </div>
 
-    <h3>Sistema de Diagnóstico Kinesiológico – Java</h3>
-    <p>
-        Aplicación en consola que toma síntomas del usuario y devuelve un diagnóstico aproximado. <br>
-        <strong>Tecnologías:</strong> Java, entrada por teclado, condicionales. <br>
-        <strong>Aprendizajes:</strong> manejo de booleanos, estructuras condicionales y validación.<br>
-        <a href="#">GitHub (enlace a agregar)</a>
-    </p>
+        <!-- Habilidades -->
+        <div class="card">
+            <h2>🛠️ Habilidades Principales</h2>
 
-    <h3>Calculadora Básica – Java</h3>
-    <p>
-        Programa simple que realiza operaciones matemáticas. <br>
-        <strong>Tecnologías:</strong> Java, métodos.<br>
-        <a href="#">GitHub (enlace a agregar)</a>
-    </p>
-
-    <h3>Juego "Adiviná el Número" – Java</h3>
-    <p>
-        Juego por consola donde el usuario debe adivinar un número al azar. <br>
-        <strong>Tecnologías:</strong> Java, ciclos, números aleatorios.<br>
-        <a href="#">GitHub (enlace a agregar)</a>
-    </p>
-
-    <h3>Mini Gestor de Tareas – Java</h3>
-    <p>
-        Sistema simple de registro de tareas desde consola. <br>
-        <strong>Tecnologías:</strong> Java, listas.<br>
-        <a href="#">GitHub (enlace a agregar)</a>
-    </p>
-
-    <h2>Contacto</h2>
-    <p>
-        📧 Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a><br>
-        🔗 LinkedIn: <a href="#">Tu LinkedIn</a><br>
-        🐱 GitHub: <a href="#">Tu GitHub</a>
-    </p>
-
-</body>
-</html>
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Java</div>
+                <div class="skill">Python</div>
+                <div class="skill">GitHub</div>
+                <div class="skill">Lógica de Programació…
